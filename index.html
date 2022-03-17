@@ -137,4 +137,15 @@ function internPrompt() {
         getTeam();    
     });
 }
+const writeFile = () => {
+    fs.writeFileSync("./dist/index.html", renderHTML(teamArray), (err) => {
+     if (err) {
+         console.log(err);
+         return;
+     }   else {
+         console.log ("Team Profile complete")
+     }
+    });
+};
+managerPrompt()
     
