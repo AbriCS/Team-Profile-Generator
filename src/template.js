@@ -66,7 +66,7 @@ const generatePage = function (data) {
     
         for(let i = 0; i < data.length; i++){
             const employees = data[i];
-            const roles = employees.renderRole();
+            const roles = employees.getRole();
     
             if(roles === 'Manager') {
                 const managerCard = generateManager(employees);

@@ -1,6 +1,6 @@
 const getHTML = require("./src/template");
 
-const Manger = require ("./lib/Manager");
+const Manager = require ("./lib/Manager");
 const Engineer = require ("./lib/Engineer");
 const Intern = require ("./lib/Intern");
 
@@ -10,8 +10,7 @@ const fs = require("fs");
 const teamArray = [];
 
 function callManager(){
-    inquirer
-    .ask([
+    inquirer.prompt([
     {
         type: "input",
         name: "name",
@@ -34,13 +33,14 @@ function callManager(){
     },
 
     ])
-    .then((answers)=>) {
+    .then((answers)=> {
         const manager = new Manager(
             answers.name,
             answers.id,
             answers.email,
             answers.officeNumber,
         );
+        console.log(manager)
         teamArray.push(manager);
         getTeam();
     });
@@ -52,21 +52,27 @@ function getTeam(){
         type: 'list',
         name: "roles",
         message: "please choose the role",
-        choices: ["Engineer", "Intern", "Other"],
+        choices: ["Engineer", "Intern","Build Team"],
     },
     ])
     .then((answers) => {
-        if (answers.roles === "Engineer") {
-            engineerPrompt();
-        }else if (answers.role === "Intern") {
-            internPrompt();
-        } else {
-            writeFile();
-        } 
+
+     switch(answers.roles) {
+        case "Engineer":
+             engineerQuestions()
+           break;
+        case "Intern":
+            internQuestions()
+            break;
+        default:
+        writeFile()
+     }
         });
         };
 
-function engineerPrompt() {
+
+
+function engineerQuestions() {
     inquirer
     .prompt([
     {
@@ -97,12 +103,13 @@ function engineerPrompt() {
             answer.email,
             answer.gitUsername,
         );
+        console.log(engineer)
         teamArray.push(engineer);
         getTeam();    
     });
 }
 
-function internPrompt() {
+function internQuestions() {
     inquirer
     .prompt([
     {
@@ -133,12 +140,13 @@ function internPrompt() {
             answer.email,
             answer.school,
         );
+        console.log(intern)
         teamArray.push(intern);
         getTeam();    
     });
 }
 const writeFile = () => {
-    fs.writeFileSync("./dist/index.html", renderHTML(teamArray), (err) => {
+    fs.writeFileSync("./dist/index.html", getHTML(teamArray), (err) => {
      if (err) {
          console.log(err);
          return;
@@ -147,5 +155,5 @@ const writeFile = () => {
      }
     });
 };
-managerPrompt()
+callManager()
     
