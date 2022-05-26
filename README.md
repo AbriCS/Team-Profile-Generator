@@ -44,7 +44,7 @@ When they finish building their team, then they exit the application, and the HT
 Below is the link to an explanatory video about how to use the application. Follow the steps to dynamically generate a team profile.
 ```
 
-[Team Profile Generator Video](./assets/team-generator-app.mp4)
+[Team Profile Generator Video](https://drive.google.com/file/d/1GivryJkbQ5tEpyuHlpaZY3WYOlvjQVv3/view?usp=sharing)
 
 
 ## Screenshots
