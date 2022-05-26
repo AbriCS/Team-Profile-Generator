@@ -28,7 +28,7 @@ This is a command-line application that takes the user input to create a HTML fi
 
 When a user clicks on an email address in the HTML then the default email program opens and populates the TO field of the email with the address. 
 
-When a user click on the GitHub username then that GitHub profile opens in a new tab. 
+When a user clicks on the GitHub username then that GitHub profile opens in a new tab. 
 
 When the user starts the application then they are prompted to enter the team manager’s name, employee ID, email address, and office number.
 
@@ -41,29 +41,17 @@ When they select the intern option, they are prompted to enter the intern’s na
 When they finish building their team, then they exit the application, and the HTML is generated.
 
 ```
-Below is an explanatory video about how to use the application Follow the steps to dynamically generate a team profile.
+Below is the link to an explanatory video about how to use the application. Follow the steps to dynamically generate a team profile.
 ```
 
-[Team Profile Generator Video](https://drive.google.com/)
+[Team Profile Generator Video](./assets/team-generator-app.mp4)
 
 
 ## Screenshots
 
-Screenshot of Application:
+This is a screenshot of the output.
 
-![Application-Screenshot](./assets/images/application.png)
-
-Team Profile Generator gif:
-
-<img src="./assets/images/video.gif">
-
-Screenshot of Terminal 1:
-
-![Screenshot1](./assets/images/screenshot1.png)
-
-Screenshot of Terminal 2:
-
-![Screenshot2](./assets/images/screenshot2.png)
+[Rendered Application](./assets/html-render.png)
 
 
 ## Contact
