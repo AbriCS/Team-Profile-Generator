@@ -51,7 +51,7 @@ Below is the link to an explanatory video about how to use the application. Foll
 
 This is a screenshot of the output.
 
-[Rendered Application](https://drive.google.com/file/d/19CHiKhbUJlBqS_oQ5w7_LNZjokgjjELr/view?usp=sharing)
+[Rendered Application](https://drive.google.com/file/d/1WlUm_HeAyIqN0eOtJ9L70GofM-S7VSoX/view?usp=sharing)
 
 
 ## Contact
